@@ -13,7 +13,7 @@ dataSet = mat(dataSet)
 # step 2: clustering...
 print "step 2: clustering..."
 k = 4
-centroids,clusterAssment =kmeansjiajia.kmeansjiajia(dataSet, k)
+centroids,clusterAssment =kmeansjiajia.kmeans(dataSet, k)
 
 # step 3: show the result
 print "step 3: show the result..."

@@ -8,7 +8,7 @@ def euclDistance(vector1, vector2):
     return sqrt(sum(power(vector2 - vector1, 2)))
 
 # k-means cluster
-def kmeansjiajia(dataSet, k):			#dataSet=[[1 2][3 4][5 6]...]
+def kmeans(dataSet, k):			#dataSet=[[1 2][3 4][5 6]...]
     import centroids
     numSamples = dataSet.shape[0]
     # clusterAssment第一列存储对应样本点属于哪一个簇,第二列是该点到簇中心的距离平方和
