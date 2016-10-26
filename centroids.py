@@ -2,6 +2,11 @@
 from numpy import *
 
 # kmeans++与kmeans的区别就在于初始点的选择不同
+# 关于kmeans++初始点选择的原理很多，自己可以去查看PPT，接下来讲得是算法实现流程
+# 1.首先从数据集中随机选取一个点作为中心点，并介入到中心点集合centroids中
+# 2.对与数据集中的每个点i，都和集合centroids中的点(已选簇中心)进行计算，得到最近距离d[i]，计算完之后得到sum(d[i])
+# 3.取一个随机值random，使random落在sum(d[i])内，然后循环计算random -=d[i]直到random<0,并把点i作为新的簇中心
+# 4.重复b和c过程直到完成所有的中心点的选取
 
 # kmeans++的初始点选择，输入数据dataSet是矩阵
 def initCentroids(dataSet,k):
